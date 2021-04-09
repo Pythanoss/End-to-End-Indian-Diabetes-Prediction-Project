@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main_home.css') }}">
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <div class="container">
+        <div class="form-container">
+            <form action="{{ url_for('predict') }}" method="POST">
+                <label for="preg">Pregnancies</label><br>
+                <input type="text" class="form-control" name="preg"></input><br><br>
+                <label for="glucose">Glucose</label><br>
+                <input type="text" class="form-control"name="glucose"></input><br><br>
+                <label for="bp">Blood Pressure</label><br>
+                <input type="text" class="form-control" name="bp"></input><br><br>
+                <label for="st">Skin Thickness</label><br>
+                <input type="text" class="form-control" name="st"></input><br><br>
+                <label for="insulin">Insulin</label><br>
+                <input type="text" class="form-control" name="insulin"></input><br><br>
+                <label for="bmi">BMI</label><br>
+                <input type="text" class="form-control" name="bmi"></input><br><br>
+                <label for="dbd">Diabetes Per Digree Function</label><br>
+                <input type="text" class="form-control" name="dbd"></input><br><br>
+                <label for="age">Age</label><br>
+                <input type="text" class="form-control"  name="age"></input><br><br>
+                <input type="submit">
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
